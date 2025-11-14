@@ -52,6 +52,7 @@ public class ManterCursoBean implements Serializable{
         		"O curso foi gravado com sucesso!", 
         		curso.toString()));
 		
+				limpar();
 		log.info("curso: " + curso.toString());
 	}
 	

@@ -20,7 +20,8 @@
 				<p:toolbarGroup>
 					<p:commandButton icon="pi pi-plus" value="Novo" id="botaoNovo" 
 						oncomplete="PF('editarDialogWidgetVar').show()"
-		            	update="editarDialog"		            	
+		            	update="editarDialog"
+						ctionListener="#{manterAlunoBean.limpar}"		            	
 		            	process="@this"/>
 				</p:toolbarGroup>
 			</p:toolbar>

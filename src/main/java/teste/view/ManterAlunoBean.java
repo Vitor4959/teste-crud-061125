@@ -16,7 +16,9 @@ import lombok.Setter;
 import lombok.extern.log4j.Log4j;
 import teste.model.Aluno;
 import teste.model.Professor;
+import teste.model.Curso;
 import teste.service.ManterAlunoService;
+import teste.service.ManterCursoService;
 import teste.service.ManterProfessorService;
 
 @Log4j
@@ -35,9 +37,13 @@ public class ManterAlunoBean implements Serializable{
 	private ManterAlunoService manterAlunoService;
 	@Inject
 	private ManterProfessorService manteProfessorService;
+	@Inject
+	private ManterCursoService manterCursoService;
+
 	private Aluno aluno = new Aluno();
 	private List<Aluno> alunos = new ArrayList<Aluno>();
 	private List<Professor> professores = new ArrayList<Professor>();
+	private List<Curso> cursos = new ArrayList<Curso>();
 
 	
 	@PostConstruct
@@ -45,6 +51,7 @@ public class ManterAlunoBean implements Serializable{
 		log.debug("init pesquisa"); 
 		this.setAlunos(manterAlunoService.buscarTodos());
 		this.setProfessores(manteProfessorService.buscarTodos());
+		this.setCursos(manterCursoService.buscarTodos());
 		limpar();
 	}
 	

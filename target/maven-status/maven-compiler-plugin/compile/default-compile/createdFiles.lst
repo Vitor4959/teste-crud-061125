@@ -10,6 +10,7 @@ teste\model\Curso.class
 teste\model\Professor.class
 teste\view\ManterCursoBean.class
 teste\service\ManterProfessorService.class
+teste\view\converter\CursoConverter.class
 teste\model\Aluno.class
 teste\model\dao\AlunoDao.class
 teste\service\ManterCursoService.class

@@ -43,5 +43,6 @@ public class Aluno implements Serializable {
 
 	@ManyToOne
 	private Professor professor;
+	@ManyToOne
 	private Curso curso;
 }

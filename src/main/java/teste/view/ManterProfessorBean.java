@@ -52,6 +52,7 @@ public class ManterProfessorBean implements Serializable{
         		"O professor foi gravado com sucesso!", 
         		professor.toString()));
 		
+				limpar();
 		log.info("professor: " + professor.toString());
 	}
 	

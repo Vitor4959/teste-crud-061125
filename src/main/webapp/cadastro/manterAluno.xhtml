@@ -23,6 +23,7 @@
 		            	update="editarDialog"	
 						actionListener="#{manterAlunoBean.limpar}"	            	
 		            	process="@this"/>
+
 				</p:toolbarGroup>
 			</p:toolbar>
 			
@@ -53,6 +54,18 @@
 					<h:outputText value="#{aluno.dataNascimento}">
 						<f:convertDateTime pattern="dd/MM/yyyy" />
 					</h:outputText>
+				</p:column>	
+
+				<p:column headerText="Ativo">
+					<h:outputText value="#{aluno.ativo}" />
+				</p:column>	
+
+				<p:column headerText="Professor">
+					<h:outputText value="#{aluno.professor.nome}" />
+				</p:column>	
+
+				<p:column headerText="Curso">
+					<h:outputText value="#{aluno.curso.sigla}" />
 				</p:column>	
 
 				<p:column headerText="Operações">					
@@ -120,6 +133,14 @@
 				<f:selectItems value="#{manterAlunoBean.professores}"
 					var="professor" itemLabel="#{professor.nome}"
 					itemValue="#{professor}"/>
+			</p:selectOneMenu>
+
+			<p:outputLabel for="cur" value="Curso: " />
+			<p:selectOneMenu id="cur" value="#{manterAlunoBean.aluno.curso}" >
+				<f:selectItem itemLabel="Selecione um curso"/>
+				<f:selectItems value="#{manterAlunoBean.cursos}"
+					var="curso" itemLabel="#{curso.sigla}"
+					itemValue="#{curso}"/>
 			</p:selectOneMenu>
 
 			<p:commandButton icon="pi pi-save" id="salvarButton"
