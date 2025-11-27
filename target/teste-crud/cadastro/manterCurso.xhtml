@@ -46,6 +46,7 @@
 					<h:outputText value="#{curso.qdeSemestres}" />
 				</p:column>				
 
+
 				<p:column headerText="Operações">					
 					
 					<p:commandButton id="cb1" icon="pi pi-pencil" title="Editar"	    				
@@ -86,6 +87,7 @@
 			<p:outputLabel for="qdeSemestres" value="Quantidade de semestres: " />
 			<p:inputText id="qdeSemestres" value="#{manterCursoBean.curso.qdeSemestres}" 
 			  required="true"/>
+
 
 			<p:commandButton icon="pi pi-save" id="salvarButton"
 				value="Salvar" title="Grava dados do curso"
